@@ -1,0 +1,58 @@
+import sys
+
+def joke():
+    line1 = 'Boo'
+    while True:
+        print("Knock knock")
+        response = input()
+
+        if response == "who's there":
+            print(line1)
+            break
+        elif response == "Who's there":
+            print(line1)
+            break
+        elif response == "who's there?":
+            print(line1)
+            break
+        elif response == "Who's there?":
+            print(line1)
+            break
+        elif response == "Who is there?":
+            print(line1)
+            break
+        elif response == "Who is there":
+            print(line1)
+            break
+        elif response == "who is there?":
+            print(line1)
+            break
+        elif response == "who is there":
+            print(line1)
+            break
+        else:
+            print('You suck.')
+            continue
+        
+    line2 = "Aww, please don't cry..."
+    while True:
+        response = input()
+
+        if response == "Boo who?":
+            print(line2)
+            sys.exit()
+        elif response == "boo who":
+            print(line2)
+            sys.exit()
+        elif response == "Boo who":
+            print(line2)
+            sys.exit()
+        elif response == "boo who?":
+            print(line2)
+            sys.exit()
+        else:
+            print('Please cooperate!')
+            print('BOO')
+            continue
+        
+joke()
