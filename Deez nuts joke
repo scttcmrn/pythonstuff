@@ -1,0 +1,7 @@
+def joke():
+    print('knock,knock')
+joke() 
+response = input()
+print('Deez')
+response = input()
+print('Deez Nutz')
