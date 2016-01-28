@@ -1,0 +1,25 @@
+def errors():
+    
+    print('1')
+    
+    try:
+        undefined
+    except NameError:
+        print('name error')
+    print('2')
+
+    try:
+        import sakldasdjasdad
+    except ImportError:
+        print('import error')
+
+    print(3)
+
+    try:
+        1 + 'one'
+    except TypeError:
+        print('type error')
+
+    print(4)
+    
+errors()
