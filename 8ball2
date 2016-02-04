@@ -1,0 +1,31 @@
+import random
+
+def ball():
+    messages = ['No.',
+        'Yes.',
+        'Maybe.',
+        'Leave me alone.',
+        'Die in a fire.',
+        'I love you.',
+        'Abso-freaking-lutely.',
+        'Definitely NOT.',
+        'I like pie.']
+
+    while True:
+        print('Ask me a "yes or no" question.')
+        question = input()
+
+        if '?' in question:
+            print(messages[random.randint(0, len(messages) - 1)])
+            time.sleep(0.5)
+            print('Press Enter to start again.')
+            inp = input()
+            if inp == '':
+                ball()
+            break
+        else:
+            print('You need to ask me a question, with a question mark!')
+            time.sleep(0.5)
+            continue
+        
+ball()
