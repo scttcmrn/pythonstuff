@@ -1,21 +1,24 @@
 import random
+import time
+
 
 def ball():
-    messages = ['No.',
-        'Yes.',
-        'Maybe.',
-        'Leave me alone.',
-        'Die in a fire.',
-        'I love you.',
-        'Abso-freaking-lutely.',
-        'Definitely NOT.',
-        'I like pie.']
+    messages = ["Bitch, it might be true.",
+                "Ain't nobody got time for that",
+                " ಠ╭╮ಠ",
+                "*Wookie noises*",
+                "Eat shit and die.",
+                "*rolls eyes*"]
 
     while True:
         print('Ask me a "yes or no" question.')
         question = input()
 
         if '?' in question:
+            print('The fortune teller gazes into the ball, searching for your answer...')
+            time.sleep(1.5)
+            print('The ball replies with...')
+            time.sleep(1.5)
             print(messages[random.randint(0, len(messages) - 1)])
             time.sleep(0.5)
             print('Press Enter to start again.')
