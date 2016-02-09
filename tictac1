@@ -1,0 +1,31 @@
+theBoard = {'topl': ' ', 'topm': ' ', 'topr': ' ',
+'midl': ' ', 'midm': ' ', 'midr': ' ',
+'botl': ' ', 'botm': ' ', 'botr': ' '}
+
+def printBoard(board):
+    print('')
+    print('Key:')
+    print(' topl | topm | topr ')
+    print(' midl | midm | midr ')
+    print(' botl | botm | botr ')
+    
+    print(' ')
+    print(' ' + board['topl'] + ' ' + '|' + ' ' + board['topm'] + ' ' + '|' + ' ' + board['topr'] + ' ')
+    print('---+---+---')
+    print(' ' + board['midl'] + ' ' + '|' + ' ' + board['midm'] + ' ' + '|' + ' ' + board['midr'] + ' ')
+    print('---+---+---')
+    print(' ' + board['botl'] + ' ' + '|' + ' ' + board['botm'] + ' ' + '|' + ' ' + board['botr'] + ' ')
+    print(' ')
+   
+turn = 'X'
+for i in range(9):
+    printBoard(theBoard)
+    print('Turn for ' + turn + '. Move on which space?')
+    move = input()
+    theBoard[move] = turn
+    if turn == 'X':
+       turn = 'O'
+    else:
+       turn = 'X'
+
+printBoard(theBoard)
