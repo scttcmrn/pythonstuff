@@ -1,0 +1,32 @@
+import pprint
+import sys
+
+def printchar():
+    print("I will count how many of each character you type.")
+
+    message = input()
+    count = {}
+
+    for character in message:
+        count.setdefault(character, 0)
+        count[character] = count[character] + 1
+
+    pprint.pprint(count)
+    tryagain()
+
+def tryagain():
+    print('Type "y" if you would like to try again.')
+    print('Type "n" to quit.')
+    
+    again = input()
+    
+    if again == 'y':
+        printchar()
+    elif again == 'n':
+        print('Bye.')
+        sys.exit
+    else:
+        print('That is not "y" or "n".')
+        tryagain()
+
+printchar()
