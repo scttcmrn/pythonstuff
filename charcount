@@ -1,5 +1,6 @@
 import pprint
 import sys
+import time
 
 def printchar():
     print("I will count how many of each character you type.")
@@ -10,12 +11,14 @@ def printchar():
     for character in message:
         count.setdefault(character, 0)
         count[character] = count[character] + 1
-
+    time.sleep(0.1)
     pprint.pprint(count)
     tryagain()
 
 def tryagain():
+    time.sleep(0.1)
     print('Type "y" if you would like to try again.')
+    time.sleep(0.1)
     print('Type "n" to quit.')
     
     again = input()
@@ -26,7 +29,9 @@ def tryagain():
         print('Bye.')
         sys.exit
     else:
+        time.sleep(0.1)
         print('That is not "y" or "n".')
         tryagain()
 
 printchar()
+time.sleep(0.1)
