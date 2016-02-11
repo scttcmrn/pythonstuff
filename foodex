@@ -1,0 +1,7 @@
+known_foods = {'mac': {'taste': 'creamy', 'origin': 'USA'},
+        'jicama': {'taste': 'sweet', 'origin': 'Mexico'}}
+while True:
+    food = input("Enter a food: ")
+    known_foods.setdefault(food, {'taste': 'like chicken', 'origin': 'somewhere'})
+    print(food + " tastes " + known_foods[food]['taste'] + " and comes from " + known_foods[food]['origin'])
+
