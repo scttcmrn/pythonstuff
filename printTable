@@ -1,0 +1,32 @@
+tabledata = [['apples', 'oranges', 'cherries', 'banana'],
+             ['Alice', 'Bob', 'Carol', 'David'],
+             ['dogs', 'cats', 'moose', 'goose']]
+
+def printTable():
+    widths = [0] * len(tabledata)
+    #^new list with places for highest length string in each nested list
+    #widths = [8,5,5]
+    #^widths should equal this, delete when done
+
+    
+    for i in range(len(tabledata)):
+        #print(tabledata[i])
+        #^lists the nested lists
+        for ii in range(len(tabledata[i])):
+            #^this looks at each list in the big list, because of nested lists... listception...
+            if widths[i] <= len(tabledata[i][ii]):
+                widths[i] = len(tabledata[i][ii])
+            else:
+                widths[i] = widths[i]
+            #I may have googled this
+                
+    #print(widths)
+    #^new widths, should be [8,5,5], delete when done
+
+    print(tabledata[0][0].rjust(widths[0]) + ' ' + tabledata[1][0].rjust(widths[1]) + ' ' + tabledata[2][0].rjust(widths[2]))
+    print(tabledata[0][1].rjust(widths[0]) + ' ' + tabledata[1][1].rjust(widths[1]) + ' ' + tabledata[2][1].rjust(widths[2]))
+    print(tabledata[0][2].rjust(widths[0]) + ' ' + tabledata[1][2].rjust(widths[1]) + ' ' + tabledata[2][2].rjust(widths[2]))
+    print(tabledata[0][3].rjust(widths[0]) + ' ' + tabledata[1][3].rjust(widths[1]) + ' ' + tabledata[2][3].rjust(widths[2]))
+    #There must be a better way to do this part...
+
+printTable()
