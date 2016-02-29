@@ -1,0 +1,25 @@
+import os
+import time
+
+totalSize = 0
+
+print('Welcome to file and folder size calculator')
+time.sleep(0.25)
+print('Please enter folder and/or file path')
+path = input()
+
+for filename in os.listdir(path):
+    totalSize = totalSize + os.path.getsize(os.path.join(path, filename))
+
+time.sleep(.25)
+print('The specified folder\'s size is:')
+time.sleep(.25)
+print(str((totalSize)*8) + ' bits')
+time.sleep(.25)
+print(str(totalSize) + ' bytes')
+time.sleep(.25)
+print(str((totalSize)/1000) + ' kilobytes')
+time.sleep(.25)
+print(str((totalSize)/1000000) + ' megabytes')
+time.sleep(.25)
+print(str((totalSize)/1000000000) + ' gigabytes')
